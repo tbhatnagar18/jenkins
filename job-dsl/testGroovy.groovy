@@ -5,9 +5,6 @@ job('Node JS Example'){
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
         }
     }
-	triggers{
-		scm('H/5 * * * *') 
-	}
 	steps{
 		shell('npm install')
 	}
