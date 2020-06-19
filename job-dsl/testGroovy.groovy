@@ -1,14 +1,19 @@
-job('TestOne Project') {
-    scm {
-        
+job('Node JS Example'){
+	scm {
+        remote {
+            github('https://github.com/wardviaene/docker-demo.git')
+        }
+        extensions {
+            userIdentity {
+				name('DSL User')
+				email('jenkins-dsl@newtech.academy')
+			}
+        }
     }
-    triggers {
-        
-    }
-    wrappers {
-        
-    }
-    steps {
-        batchFile("echo... This is a test...")
-    }
+	triggers{
+		scm('H/5 * * * *') 
+	}
+	steps{
+		shell('npm install')
+	}
 }
