@@ -9,6 +9,6 @@ job('TestOne Project') {
         
     }
     steps {
-        powerShell("echo... This is a test...")
+        batchFile("echo... This is a test...")
     }
 }
