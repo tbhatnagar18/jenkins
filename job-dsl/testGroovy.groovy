@@ -1,14 +1,6 @@
 job('Node JS Example'){
 	scm {
-        remote {
-            github('https://github.com/wardviaene/docker-demo.git')
-        }
-        extensions {
-            userIdentity {
-				name('DSL User')
-				email('jenkins-dsl@newtech.academy')
-			}
-        }
+        github('https://github.com/wardviaene/docker-demo.git')
     }
 	triggers{
 		scm('H/5 * * * *') 
