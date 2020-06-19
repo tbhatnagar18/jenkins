@@ -1,6 +1,6 @@
 job('Node JS Example'){
 	scm {
-        github('https://github.com/wardviaene/docker-demo.git')
+        github('wardviaene/docker-demo.git')
     }
 	triggers{
 		scm('H/5 * * * *') 
