@@ -9,7 +9,7 @@ folder('$basePath'){
 
 job('$basePath/a0_$env-install-and-db-upgrade') {
     scm {
-        github 'tbhatnagar18/jenkins'
+        github '$repo'
     }
     triggers {
         scm 'H/5 * * * *'
